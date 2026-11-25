@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuit-recipe-compiler"
+version = "0.1.0"
+description = "Compile PyRTL circuits into Regrow-8 text recipes"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["pyrtl==1.0.3"]
+
+[project.scripts]
+crc = "circuit_recipe_compiler:main"
+
+[tool.setuptools]
+py-modules = ["circuit_recipe_compiler"]
+package-dir = {"" = "src"}
